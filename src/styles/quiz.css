@@ -6,7 +6,6 @@ body{
 }
 
 .quiz-wrapper{
-    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15,8 +14,8 @@ body{
 .quiz{
     background-color: #2E3645;
     /* padding: 2em; */
-    width: 90%;
-    min-height: 80vh;
+    width: 100%;
+    min-height: 90vh;
     box-shadow: 2px 2px 20px #233444;
     /* transform: translate(-200em, 0); */
     /* opacity: 0; */
@@ -38,7 +37,7 @@ body{
     display: flex;
 }
 .quiz-correct div{
-    background-color: green;
+    background-color: rgb(59, 104, 59);
     min-height: 0.2em;
     animation-name: animate-width;
     animation-duration: 0.5s;
@@ -46,7 +45,7 @@ body{
     animation-direction: forwards;
 }
 .quiz-incorrect div{
-    background-color: red;
+    background-color: rgb(218, 80, 39);
     min-height: 0.2em;
     animation-name: animate-width;
     animation-duration: 0.5s;
@@ -55,6 +54,14 @@ body{
 }
 .radio-choice{
     margin-right: 0.5em;
+}
+.quiz-choices{
+    /* background-color: red; */
+}
+.quiz-choice-item{
+    background-color: #18243775;
+    padding: 0.5em;
+    margin-top: 1em;
 }
 
 /* Animations */

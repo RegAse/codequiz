@@ -3,6 +3,7 @@ import "./../styles/quiz.css"
 import { data } from "./../data/quizData"
 
 import { useState, useEffect } from "react";
+import Navbar from "./layout/navbar";
 
 export default function Quiz() {
 
@@ -36,7 +37,7 @@ export default function Quiz() {
         setAnimationState(true);
     }
 
-    function onQuestionChosen(event){
+    function onQuestionChosen(event) {
         setCurrentChoice(event.target.value);
     }
 
@@ -56,8 +57,9 @@ export default function Quiz() {
         }, 400)
     }
 
-    return (
-        <div className="quiz-wrapper">
+    return (<>
+        <Navbar></Navbar>
+        <div className="container">
             <div className="quiz">
                 <div className="quiz-progressbar">
                     {
@@ -74,7 +76,7 @@ export default function Quiz() {
                     <div className="quiz-content">
                         <h2 className="quiz-question-title text-center">{quiz.name}</h2>
                         <h2 className="quiz-question-result-title text-center">Congratulations!</h2>
-                        <p className="text-center">You got {result.answers.filter(Boolean).length} out of { quiz.questions.length } Correct</p>
+                        <p className="text-center">You got {result.answers.filter(Boolean).length} out of {quiz.questions.length} Correct</p>
                     </div>
                     : <div className={(animationState ? "quiz-swipe-in" : "quiz-swipe-out")}>
                         <div className="quiz-content">
@@ -85,8 +87,8 @@ export default function Quiz() {
                             <div onChange={onQuestionChosen}>
                                 {
                                     currentQuestion.choices.map((choice, index) => (
-                                        <div className="quiz-choice" key={choice.choice}>
-                                            <label>
+                                        <div className="quiz-choices" key={choice.choice}>
+                                            <label className="quiz-choice-item">
                                                 <input className="radio-choice" type="radio" name="choice" value={index} />
                                                 {choice.choice}
                                             </label>
@@ -100,5 +102,6 @@ export default function Quiz() {
                 }
             </div>
         </div>
+    </>
     );
 }
