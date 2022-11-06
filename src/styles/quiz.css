@@ -1,0 +1,111 @@
+/* Styles for when the user is taking a quiz */
+
+body{
+    background-color: #262937;
+    color: white;
+}
+
+.quiz-wrapper{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quiz{
+    background-color: #2E3645;
+    /* padding: 2em; */
+    width: 90%;
+    min-height: 80vh;
+    box-shadow: 2px 2px 20px #233444;
+    /* transform: translate(-200em, 0); */
+    /* opacity: 0; */
+}
+.quiz-content{
+    padding: 2em;
+    font-size: 1.5em;
+}
+.quiz-question-result-title{
+    color: #d0d0d0;
+}
+.quiz-question-number{
+    color: grey;
+}
+
+.quiz-progressbar{
+    min-height: 0.2em;
+    background-color: #53535370;
+    display: flex;
+}
+.quiz-correct div{
+    background-color: green;
+    min-height: 0.2em;
+    animation-name: animate-width;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-direction: forwards;
+}
+.quiz-incorrect div{
+    background-color: red;
+    min-height: 0.2em;
+    animation-name: animate-width;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-direction: forwards;
+}
+.radio-choice{
+    margin-right: 0.5em;
+}
+
+/* Animations */
+
+.quiz-swipe-in{
+    animation-name: swipe-in;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+}
+.quiz-swipe-out{
+    animation-name: swipe-out;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+@keyframes animate-width {
+    from {
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+@keyframes swipe-in {
+    from {
+        /* transform: translate(-10em, 0); */
+        opacity: 0;
+    }
+    to {
+        /* transform: translate(0, 0); */
+        opacity: 1;
+    }
+}
+
+@keyframes swipe-out {
+    0% {
+        /* transform: translate(0, 0); */
+        opacity: 1;
+    }
+    50% {
+        /* transform: translate(10em, 0); */
+        opacity: 0;
+    }
+    51% {
+        /* transform: translate(-10em, 0); */
+        opacity: 0;
+    }
+    100% {
+        /* transform: translate(0, 0); */
+        opacity: 1;
+    }
+
+}
