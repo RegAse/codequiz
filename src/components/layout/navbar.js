@@ -12,14 +12,14 @@ function Navbar() {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://www.linkedin.com/in/gudmundur-axel-gudrunarson"></a>
+                        <li className="nav-item">
+                            <a className="nav-link" href="https://www.linkedin.com/in/gudmundur-axel-gudrunarson"></a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://github.com/RegAse"></a>
+                        <li className="nav-item">
+                            <a className="nav-link" href="https://github.com/RegAse"></a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="mailto:gudmundur210@gmail.com"></a>
+                        <li className="nav-item">
+                            <a className="nav-link" href="mailto:gudmundur210@gmail.com"></a>
                         </li>
                     </ul>
                 </div>

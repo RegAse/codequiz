@@ -1,8 +1,19 @@
 import Navbar from "./components/layout/navbar";
 import Quizlist from "./components/quizList";
 import { data } from "./data/quizData"
+import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { HashLink } from 'react-router-hash-link';
 
-export default function Root() {
+
+export default function Root(props) {
+
+    // useEffect(() => {
+    //     const hash = props.history.location.hash;
+    //     if(hash && document.getElementById(hash.substr(1))) {
+    //         document.getElementById(hash.substr(1)).scrollIntoView({behavior: "smooth"});
+    //     }
+    // }, [props.history.location.hash]);
 
 
     return (<>
@@ -24,7 +35,9 @@ export default function Root() {
                 <div className="col-md-4 brand-container">
                     <h1 className="brand-heading">CodeQuiz</h1>
                     <p className="brand-sub-heading">Train your brain</p>
-                    <a href="#take-a-quiz"><button className="btn btn-main">Take a quiz</button></a>
+                    <HashLink to={{ pathname: "/", hash: "#take-a-quiz" }}>
+                        <button className="btn btn-main">Take a quiz</button>
+                    </HashLink>
                 </div>
             </div>
         </div>
