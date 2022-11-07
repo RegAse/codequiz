@@ -20,7 +20,7 @@ export default function Root(props) {
         <Navbar></Navbar>
         <div className="wrap-1">
             <div className="box-flow-1" style={{left: "10%", animationDelay: "-2s"}}>Margrét<p> is our coder </p></div>
-            <div className="box-flow-1" style={{left: "20%", animationDelay: "-5s"}}>Helga<p> is our CEO</p></div>
+            <div className="box-flow-1" style={{left: "20%", animationDelay: "-5s"}}>Ásta<p> is our CEO</p></div>
             <div className="box-flow-1" style={{left: "35%", animationDelay: "-1s"}}>Alfreð<p> is our CCO </p></div>
             <div className="box-flow-1" style={{left: "50%", animationDelay: "-3s"}}>Karl<p> is our Marketing Lead</p></div>
             <div className="box-flow-1" style={{left: "65%", animationDelay: "-2.5s"}}>Perla<p> is our Manager Cat</p></div>
