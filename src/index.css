@@ -1,10 +1,18 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    sans-serif; */
+  font-family: 'Open Sans', sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* background-color: #262937; */
+  /* background-image: linear-gradient(to right, rgb(31, 33, 44), rgb(40, 40, 53)); */
+  color: white;
+  overflow-x: hidden;
+  background: black url("../public/images/web-design-8.png");
+  background-attachment: fixed;
+
 }
 
 code {
@@ -12,11 +20,133 @@ code {
     monospace;
 }
 
+a {
+  text-decoration: none;
+}
+
+.navbar-1{
+  background-color: rgba(0, 0, 0, 0.151) !important;
+  min-height: 5em;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.navbar-1 a{
+  font-size: 2em;
+}
+
+.brand-container{
+  padding: 2em;
+  transition: text-shadow 1s;
+  z-index: 3;
+}
+.brand-container:hover{
+  text-shadow: 0px 0px 10px rgb(107, 127, 180);
+}
+.brand-heading{
+  font-size: 3em;
+}
+.brand-sub-heading{
+  color: rgb(155, 155, 155);
+  font-size: 1.2em;
+}
+
 .wrap-1 {
+  /* background-color: rgb(20, 20, 20); */
+  /* background: black url("../public/images/web-design-8.png"); */
+  background-size: cover;
+  /* border-bottom: 1px solid #2e2e42; */
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  background-color: #20222b;
   color: white;
+}
+
+.footer {
+  margin-top: 2em;
+  min-height: 12em;
+  background-color: #191919a3;
+  padding: 1em;
+}
+
+.btn-main{
+  background-color: #3B4F66;
+  color: white;
+  padding: 0.5em 2em;
+  border-radius: 3%;
+}
+.btn-main:hover{
+  color: white !important;
+  background-color: rgb(68, 89, 114) !important;
+}
+
+.right-indicator{
+  position: absolute;
+  right: 1em;
+}
+.right-indicator div{
+  margin-top: 0.3em;
+  width: 1em;
+  height: 1em;
+  background-color: #757575a6;
+  border-radius: 0.1em
+}
+.right-indicator .active{
+  min-width: 1.5em;
+  min-height: 1.5em;
+}
+
+
+/* Animations for the first section of the landing page */
+.box-flow-1{
+  background-color: rgba(197, 159, 159, 0.103);
+  max-height: 0.5em;
+  width: 0.5em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  animation-name: box-flow;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transition: scale 1s;
+  z-index: 1;
+}
+.box-flow-1 p{
+  opacity: 0;
+  transition: opacity 1s;
+}
+.box-flow-1:hover{
+  /* transform: rotate(300deg); */
+  scale: 3;
+  transform: rotate(0);
+}
+.box-flow-1:hover p{
+  /* transform: rotate(300deg); */
+  opacity: 1;
+}
+
+@keyframes box-flow{
+  0% {
+    opacity: 0;
+    top: 100%;
+    box-shadow: 0px 0px 10px rgb(246, 253, 255);
+  }
+  15%{
+    opacity: 1;
+  }
+  50%{
+    box-shadow: 0px 0px 20px rgb(101, 166, 226);
+  }
+  85%{
+    opacity: 1;
+  }
+  100%{
+    top: 10%;
+    opacity: 0;
+    transform: rotate(330deg);
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
+  }
 }

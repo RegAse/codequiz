@@ -58,47 +58,49 @@ function Quiz() {
 
     return (<>
         <Navbar></Navbar>
-        <div className="container">
-            <div className="quiz">
-                <div className="quiz-progressbar">
-                    {
-                        result.answers.map(answer => (
-                            answer ?
-                                <div className="quiz-correct" style={{ width: ((1) / quiz.questions.length) * 100 + "%" }}><div></div></div>
-                                :
-                                <div className="quiz-incorrect" style={{ width: ((1) / quiz.questions.length) * 100 + "%" }}><div></div></div>
-                        ))
-                    }
-                </div>
-                {hasResult
-                    ?
-                    <div className="quiz-content">
-                        <h2 className="quiz-question-title text-center">{quiz.name}</h2>
-                        <h2 className="quiz-question-result-title text-center">Congratulations!</h2>
-                        <p className="text-center">You got {result.answers.filter(Boolean).length} out of {quiz.questions.length} Correct</p>
+        <div className="quiz-container">
+            <div className="container">
+                <div className="quiz">
+                    <div className="quiz-progressbar">
+                        {
+                            result.answers.map(answer => (
+                                answer ?
+                                    <div className="quiz-correct" style={{ width: ((1) / quiz.questions.length) * 100 + "%" }}><div></div></div>
+                                    :
+                                    <div className="quiz-incorrect" style={{ width: ((1) / quiz.questions.length) * 100 + "%" }}><div></div></div>
+                            ))
+                        }
                     </div>
-                    : <div className={(animationState ? "quiz-swipe-in" : "quiz-swipe-out")}>
+                    {hasResult
+                        ?
                         <div className="quiz-content">
                             <h2 className="quiz-question-title text-center">{quiz.name}</h2>
-                            <p className="quiz-question-number text-center">Question {currentQuestionIndex + 1} of {quiz.questions.length}</p>
-
-                            <p className="quiz-question mt-5">{currentQuestion.name}</p>
-                            <div onChange={onQuestionChosen}>
-                                {
-                                    currentQuestion.choices.map((choice, index) => (
-                                        <div className="quiz-choices" key={choice.choice}>
-                                            <label className="quiz-choice-item">
-                                                <input className="radio-choice" type="radio" name="choice" value={index} />
-                                                {choice.choice}
-                                            </label>
-                                        </div>
-                                    ))
-                                }
-                            </div>
-                            <button className="btn btn-primary mt-3" onClick={() => answerQuestion()}>Submit</button>
+                            <h2 className="quiz-question-result-title text-center">Congratulations!</h2>
+                            <p className="text-center">You got {result.answers.filter(Boolean).length} out of {quiz.questions.length} Correct</p>
                         </div>
-                    </div>
-                }
+                        : <div className={(animationState ? "quiz-swipe-in" : "quiz-swipe-out")}>
+                            <div className="quiz-content">
+                                <h2 className="quiz-question-title text-center">{quiz.name}</h2>
+                                <p className="quiz-question-number text-center">Question {currentQuestionIndex + 1} of {quiz.questions.length}</p>
+
+                                <p className="quiz-question mt-5">{currentQuestion.name}</p>
+                                <div onChange={onQuestionChosen}>
+                                    {
+                                        currentQuestion.choices.map((choice, index) => (
+                                            <div className="quiz-choices" key={choice.choice}>
+                                                <label className="quiz-choice-item">
+                                                    <input className="radio-choice" type="radio" name="choice" value={index} />
+                                                    {choice.choice}
+                                                </label>
+                                            </div>
+                                        ))
+                                    }
+                                </div>
+                                <button className="btn btn-primary mt-3" onClick={() => answerQuestion()}>Submit</button>
+                            </div>
+                        </div>
+                    }
+                </div>
             </div>
         </div>
     </>

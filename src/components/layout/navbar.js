@@ -1,6 +1,6 @@
 function Navbar() {
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark navbar-1 navbar-fixed-top">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top navbar-1">
             <div className="container-fluid">
                 <a className="navbar-brand" href="#">CodeQuiz
                     {/* <img className='box-to-slide-in-1 slide-in-1' height="24" src="./images/web-design-5-fancy-text.png" alt="Failed loading..." /> */}

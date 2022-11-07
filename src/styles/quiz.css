@@ -1,42 +1,48 @@
 /* Styles for when the user is taking a quiz */
-
-body{
-    background-color: #262937;
-    color: white;
+.quiz-container {
+    height: 100vh;
+    padding-top: 6em;
+    /* background-color: red !important; */
+    background: black url("../../public/images/web-design-8.png");
 }
 
-.quiz-wrapper{
+.quiz-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.quiz{
+.quiz {
     background-color: #2E3645;
+    /* margin-top: 6em; */
     /* padding: 2em; */
     width: 100%;
-    min-height: 90vh;
+    min-height: 80vh;
     box-shadow: 2px 2px 20px #233444;
     /* transform: translate(-200em, 0); */
     /* opacity: 0; */
 }
-.quiz-content{
+
+.quiz-content {
     padding: 2em;
     font-size: 1.5em;
 }
-.quiz-question-result-title{
+
+.quiz-question-result-title {
     color: #d0d0d0;
 }
-.quiz-question-number{
+
+.quiz-question-number {
     color: grey;
 }
 
-.quiz-progressbar{
+.quiz-progressbar {
     min-height: 0.2em;
     background-color: #53535370;
     display: flex;
 }
-.quiz-correct div{
+
+.quiz-correct div {
     background-color: rgb(59, 104, 59);
     min-height: 0.2em;
     animation-name: animate-width;
@@ -44,7 +50,8 @@ body{
     animation-iteration-count: 1;
     animation-direction: forwards;
 }
-.quiz-incorrect div{
+
+.quiz-incorrect div {
     background-color: rgb(218, 80, 39);
     min-height: 0.2em;
     animation-name: animate-width;
@@ -52,26 +59,31 @@ body{
     animation-iteration-count: 1;
     animation-direction: forwards;
 }
-.radio-choice{
+
+.radio-choice {
     margin-right: 0.5em;
 }
-.quiz-choices{
+
+.quiz-choices {
     /* background-color: red; */
 }
-.quiz-choice-item{
-    background-color: #18243775;
+
+.quiz-choice-item {
+    /* background-color: #18243775; */
+    background-color: #363f4d;
     padding: 0.5em;
     margin-top: 1em;
 }
 
 /* Animations */
 
-.quiz-swipe-in{
+.quiz-swipe-in {
     animation-name: swipe-in;
     animation-duration: 0.5s;
     animation-iteration-count: 1;
 }
-.quiz-swipe-out{
+
+.quiz-swipe-out {
     animation-name: swipe-out;
     animation-duration: 1s;
     animation-iteration-count: 1;
@@ -81,7 +93,8 @@ body{
     from {
         width: 0;
     }
-    to{
+
+    to {
         width: 100%;
     }
 }
@@ -91,6 +104,7 @@ body{
         /* transform: translate(-10em, 0); */
         opacity: 0;
     }
+
     to {
         /* transform: translate(0, 0); */
         opacity: 1;
@@ -102,14 +116,17 @@ body{
         /* transform: translate(0, 0); */
         opacity: 1;
     }
+
     50% {
         /* transform: translate(10em, 0); */
         opacity: 0;
     }
+
     51% {
         /* transform: translate(-10em, 0); */
         opacity: 0;
     }
+
     100% {
         /* transform: translate(0, 0); */
         opacity: 1;

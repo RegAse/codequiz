@@ -19,7 +19,7 @@ function Quizlist() {
                                         <p>{quiz.name}</p>
                                     </div>
                                 </div>
-                                <div className="col-md-6">
+                                <div className="col-md-6 quizlist-item-info">
                                     <h2>{quiz.name}</h2>
                                     <p>{quiz.description}</p>
                                 </div>
