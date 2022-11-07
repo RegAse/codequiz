@@ -1,0 +1,23 @@
+a{
+    text-decoration: none;
+}
+.quizlist{
+    /* background-color: red; */
+}
+.quizlist-item{
+    background-color: rgb(68, 85, 104);
+    margin-top: 1em;
+    color: white;
+}
+
+.quizlist-fakephoto{
+    color: rgb(90, 139, 90);
+    background-color: rgb(65, 62, 62);
+    height: 8em;
+    width: 100%;
+    font-size: 1.3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}

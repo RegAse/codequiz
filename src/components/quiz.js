@@ -5,7 +5,7 @@ import { data } from "./../data/quizData"
 import { useState, useEffect } from "react";
 import Navbar from "./layout/navbar";
 
-export default function Quiz() {
+function Quiz() {
 
     let { id } = useParams();
 
@@ -16,7 +16,7 @@ export default function Quiz() {
     const [currentChoice, setCurrentChoice] = useState(-1);
 
     // Get the quiz data....
-    let quiz = data["quizzes"][0];
+    let quiz = data["quizzes"][id];
     let currentQuestionData = quiz.questions[currentQuestionIndex];
 
     const [currentQuestion, setCurrentQuestion] = useState(currentQuestionData);
@@ -46,7 +46,6 @@ export default function Quiz() {
 
         // Check if the answer was correct or not...
         let isCorrect = currentQuestion.answer == currentChoice;
-        console.log(isCorrect);
 
         // Store the user answer
         setResult({ answers: [...result.answers, isCorrect] });
@@ -54,7 +53,7 @@ export default function Quiz() {
         // Load next question while swiping the other one out
         setTimeout(function () {
             nextQuestion();
-        }, 400)
+        }, 200)
     }
 
     return (<>
@@ -105,3 +104,4 @@ export default function Quiz() {
     </>
     );
 }
+export default Quiz;
